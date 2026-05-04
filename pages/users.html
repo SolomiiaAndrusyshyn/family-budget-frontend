@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Family Budget - Members">
+    <title>Members | Family Budget</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo"> Family Budget</a>
+            <nav class="header__nav">
+                <a href="../index.html" class="header__nav-link">Dashboard</a>
+                <a href="./family-budget.html" class="header__nav-link">Family Budget</a>
+                <a href="./categories.html" class="header__nav-link">Categories</a>
+                <a href="./users.html" class="header__nav-link header__nav-link--active">Members</a>
+                <a href="./login.html" class="header__nav-link header__nav-link--logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="page">
+
+            <div class="page__header">
+                <h1 class="page__title">Family Members</h1>
+                <p class="page__subtitle">Manage all users connected to the family budget</p>
+            </div>
+
+            <div class="page__actions">
+                <a href="./register.html" class="btn btn--primary btn--small"> Add Member</a>
+            </div>
+
+            <div class="notification notification--success">
+                <span class="notification__text">Member was successfully updated!</span>
+            </div>
+
+            <div class="table-card">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Role</th>
+                            <th>Personal Balance</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Admin</td>
+                            <td>$200.00</td>
+                            <td>
+                                <a href="./user-detail.html" class="btn btn--secondary btn--small">View</a>
+                                <a href="./edit-user.html" class="btn btn--primary btn--small">Edit</a>
+                                <button class="btn btn--danger btn--small">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Anna</td>
+                            <td>Member</td>
+                            <td>$150.00</td>
+                            <td>
+                                <a href="./user-detail.html" class="btn btn--secondary btn--small">View</a>
+                                <a href="./edit-user.html" class="btn btn--primary btn--small">Edit</a>
+                                <button class="btn btn--danger btn--small">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Mike</td>
+                            <td>Member</td>
+                            <td>$100.00</td>
+                            <td>
+                                <a href="./user-detail.html" class="btn btn--secondary btn--small">View</a>
+                                <a href="./edit-user.html" class="btn btn--primary btn--small">Edit</a>
+                                <button class="btn btn--danger btn--small">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2024 Family Budget</p>
+        </div>
+    </footer>
+
+</body>
+</html>

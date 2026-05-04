@@ -1,0 +1,35 @@
+.notification {
+    padding: $spacing-sm $spacing-md;
+    border-radius: $radius-sm;
+    margin-bottom: $spacing-md;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: none;
+
+    &--error {
+        background: rgba($color-error, 0.1);
+        color: $color-error;
+        border-left: 4px solid $color-error;
+    }
+
+    &--success {
+        background: rgba($color-success, 0.1);
+        color: $color-success;
+        border-left: 4px solid $color-success;
+    }
+
+    &--visible {
+        display: block;
+    }
+}
+
+.form__error {
+    color: $color-error;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: none;
+
+    &--visible {
+        display: block;
+    }
+}

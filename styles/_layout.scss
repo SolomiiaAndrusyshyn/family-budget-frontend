@@ -1,0 +1,90 @@
+.main {
+    flex: 1;
+    padding: $spacing-xl 0;
+    background: #f5f6fa;
+    position: relative;
+    overflow: hidden;
+
+    // декоративні еліпси на фоні
+    &::before {
+        content: '';
+        position: fixed;
+        top: -120px;
+        right: -120px;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba($color-primary, 0.08), transparent 70%);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    &::after {
+        content: '';
+        position: fixed;
+        bottom: -100px;
+        left: -100px;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba($color-accent, 0.07), transparent 70%);
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+
+
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+    position: relative;
+    z-index: 1;
+    animation: fade-in 0.4s ease both;
+
+    &__header {
+        margin-bottom: $spacing-xl;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: $color-text;
+        letter-spacing: -0.02em;
+        margin-bottom: $spacing-sm;
+    }
+
+    &__subtitle {
+        color: $color-text-light;
+        font-size: 1rem;
+    }
+
+    &__actions {
+        display: flex;
+        gap: $spacing-sm;
+        margin-bottom: $spacing-lg;
+        flex-wrap: wrap;
+    }
+
+    &__back {
+        display: inline-block;
+        color: $color-primary;
+        font-weight: 600;
+        margin-bottom: $spacing-sm;
+        transition: $transition;
+
+        &:hover {
+            color: $color-primary-hover;
+            transform: translateX(-4px);
+        }
+    }
+
+    @include mobile {
+        padding: 0 $spacing-md;
+
+        &__title {
+            font-size: 1.5rem;
+        }
+    }
+}

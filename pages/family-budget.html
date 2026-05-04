@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Family Budget - Family Account">
+    <title>Family Budget | Family Budget</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo">💰 Family Budget</a>
+            <nav class="header__nav">
+                <a href="../index.html" class="header__nav-link">Dashboard</a>
+                <a href="./family-budget.html" class="header__nav-link header__nav-link--active">Family Budget</a>
+                <a href="./categories.html" class="header__nav-link">Categories</a>
+                <a href="./users.html" class="header__nav-link">Members</a>
+                <a href="./login.html" class="header__nav-link header__nav-link--logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+        <div class="page">
+
+            <!-- page header -->
+            <div class="page__header">
+                <h1 class="page__title">Family Budget</h1>
+                <p class="page__subtitle">Shared family account overview</p>
+            </div>
+
+            <!-- balance card -->
+            <div class="balance-card">
+                <div class="balance-card__info">
+                    <p class="balance-card__label">Total Family Balance</p>
+                    <p class="balance-card__value" id="family-balance">$0.00</p>
+                    <p class="balance-card__members" id="members-count">3 family members</p>
+                </div>
+                <div class="balance-card__icon">💰</div>
+            </div>
+
+            <!-- action buttons -->
+            <div class="page__actions">
+                <a href="./deposit.html" class="btn btn--primary btn--small">
+                    ➕ Add Funds
+                </a>
+                <a href="./withdraw.html" class="btn btn--danger btn--small">
+                    ➖ Withdraw
+                </a>
+                <a href="./family-history.html" class="btn btn--secondary btn--small">
+                    📋 View History
+                </a>
+            </div>
+
+            <!-- members list -->
+            <div class="section">
+                <h2 class="section__title">Family Members</h2>
+                <div class="members-grid" id="members-grid">
+
+                    <!-- member card -->
+                    <div class="member-card">
+                        <div class="member-card__avatar">👤</div>
+                        <div class="member-card__info">
+                            <p class="member-card__name">John</p>
+                            <p class="member-card__role">Admin</p>
+                        </div>
+                        <div class="member-card__balance">
+                            <p class="member-card__balance-label">Personal Balance</p>
+                            <p class="member-card__balance-value">$200.00</p>
+                        </div>
+                        <a href="./personal-history.html" class="btn btn--secondary btn--small">
+                            History
+                        </a>
+                    </div>
+
+                    <!-- member card -->
+                    <div class="member-card">
+                        <div class="member-card__avatar">👤</div>
+                        <div class="member-card__info">
+                            <p class="member-card__name">Anna</p>
+                            <p class="member-card__role">Member</p>
+                        </div>
+                        <div class="member-card__balance">
+                            <p class="member-card__balance-label">Personal Balance</p>
+                            <p class="member-card__balance-value">$150.00</p>
+                        </div>
+                        <a href="./personal-history.html" class="btn btn--secondary btn--small">
+                            History
+                        </a>
+                    </div>
+
+                    <!-- member card -->
+                    <div class="member-card">
+                        <div class="member-card__avatar">👤</div>
+                        <div class="member-card__info">
+                            <p class="member-card__name">Mike</p>
+                            <p class="member-card__role">Member</p>
+                        </div>
+                        <div class="member-card__balance">
+                            <p class="member-card__balance-label">Personal Balance</p>
+                            <p class="member-card__balance-value">$100.00</p>
+                        </div>
+                        <a href="./personal-history.html" class="btn btn--secondary btn--small">
+                            History
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- error notification -->
+            <div class="notification notification--error" id="error-message">
+                <span class="notification__text">Something went wrong. Please try again.</span>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2024 Family Budget</p>
+        </div>
+    </footer>
+
+</body>
+</html>

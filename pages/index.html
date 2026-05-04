@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Family Budget - Dashboard">
+    <title>Dashboard | Family Budget</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="header__container">
+            <a href="./index.html" class="header__logo">💰 Family Budget</a>
+            <nav class="header__nav">
+                <a href="./index.html" class="header__nav-link">Dashboard</a>
+                <a href="./pages/family-budget.html" class="header__nav-link">Family Budget</a>
+                <a href="./pages/categories.html" class="header__nav-link">Categories</a>
+                <a href="./pages/users.html" class="header__nav-link">Members</a>
+                <a href="./pages/login.html" class="header__nav-link header__nav-link--logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+        <div class="dashboard">
+
+            <!-- welcome -->
+            <div class="dashboard__welcome">
+                <h1 class="dashboard__title">Welcome, <span id="username">User</span>!</h1>
+                <p class="dashboard__subtitle">Here is your family budget overview</p>
+            </div>
+
+            <!-- stats cards -->
+            <div class="dashboard__cards">
+
+                <div class="stat-card stat-card--green">
+                    <div class="stat-card__icon">💰</div>
+                    <div class="stat-card__info">
+                        <p class="stat-card__label">Family Balance</p>
+                        <p class="stat-card__value" id="family-balance">$0.00</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card--blue">
+                    <div class="stat-card__icon">👤</div>
+                    <div class="stat-card__info">
+                        <p class="stat-card__label">My Personal Balance</p>
+                        <p class="stat-card__value" id="personal-balance">$0.00</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card--orange">
+                    <div class="stat-card__icon">👨‍👩‍👧</div>
+                    <div class="stat-card__info">
+                        <p class="stat-card__label">Family Members</p>
+                        <p class="stat-card__value" id="members-count">0</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card--purple">
+                    <div class="stat-card__icon">📊</div>
+                    <div class="stat-card__info">
+                        <p class="stat-card__label">Total Transactions</p>
+                        <p class="stat-card__value" id="transactions-count">0</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- quick actions -->
+            <div class="dashboard__actions">
+                <h2 class="dashboard__section-title">Quick Actions</h2>
+                <div class="dashboard__action-buttons">
+                    <a href="./pages/deposit.html" class="action-btn action-btn--deposit">
+                        <span class="action-btn__icon">➕</span>
+                        <span class="action-btn__text">Add Funds</span>
+                    </a>
+                    <a href="./pages/withdraw.html" class="action-btn action-btn--withdraw">
+                        <span class="action-btn__icon">➖</span>
+                        <span class="action-btn__text">Withdraw</span>
+                    </a>
+                    <a href="./pages/family-history.html" class="action-btn action-btn--history">
+                        <span class="action-btn__icon">📋</span>
+                        <span class="action-btn__text">Family History</span>
+                    </a>
+                    <a href="./pages/personal-history.html" class="action-btn action-btn--personal">
+                        <span class="action-btn__icon">👤</span>
+                        <span class="action-btn__text">My History</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- recent transactions -->
+            <div class="dashboard__recent">
+                <h2 class="dashboard__section-title">Recent Transactions</h2>
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead class="table__head">
+                            <tr>
+                                <th class="table__th">Member</th>
+                                <th class="table__th">Type</th>
+                                <th class="table__th">Category</th>
+                                <th class="table__th">Amount</th>
+                                <th class="table__th">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table__body" id="transactions-table">
+                            <tr class="table__row">
+                                <td class="table__td">John</td>
+                                <td class="table__td">
+                                    <span class="badge badge--deposit">Deposit</span>
+                                </td>
+                                <td class="table__td">Food</td>
+                                <td class="table__td table__td--amount">+ $500.00</td>
+                                <td class="table__td">2024-01-15</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__td">Anna</td>
+                                <td class="table__td">
+                                    <span class="badge badge--withdraw">Withdraw</span>
+                                </td>
+                                <td class="table__td">Transport</td>
+                                <td class="table__td table__td--withdraw">- $100.00</td>
+                                <td class="table__td">2024-01-14</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2024 Family Budget</p>
+        </div>
+    </footer>
+
+</body>
+</html>

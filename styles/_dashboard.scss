@@ -1,0 +1,274 @@
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $spacing-xl $spacing-lg;
+    animation: fade-in 0.4s ease both;
+
+    // welcome section
+    &__welcome {
+        margin-bottom: $spacing-xl;
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: $color-text;
+        letter-spacing: -0.02em;
+        margin-bottom: $spacing-sm;
+
+        span {
+            color: $color-primary;
+        }
+    }
+
+    &__subtitle {
+        color: $color-text-light;
+        font-size: 1rem;
+    }
+
+    // stats grid
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $spacing-md;
+        margin-bottom: $spacing-xl;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // quick actions
+    &__actions {
+        margin-bottom: $spacing-xl;
+    }
+
+    &__action-buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $spacing-md;
+        margin-top: $spacing-md;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__section-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: $color-text;
+        margin-bottom: $spacing-md;
+        padding-bottom: $spacing-sm;
+        border-bottom: 2px solid rgba($color-primary, 0.15);
+    }
+
+    // recent transactions
+    &__recent {
+        margin-bottom: $spacing-xl;
+    }
+}
+
+// stat cards
+.stat-card {
+    background: $color-white;
+    border-radius: $radius-md;
+    padding: $spacing-lg;
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: $transition;
+    position: relative;
+    overflow: hidden;
+    animation: scale-up 0.4s ease both;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        border-radius: $radius-sm 0 0 $radius-sm;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    &--green {
+        &::before { background: #27ae60; }
+
+        .stat-card__icon {
+            background: rgba(#27ae60, 0.1);
+            color: #27ae60;
+        }
+
+        .stat-card__value { color: #27ae60; }
+    }
+
+    &--blue {
+        &::before { background: $color-accent; }
+
+        .stat-card__icon {
+            background: rgba($color-accent, 0.1);
+            color: $color-accent;
+        }
+
+        .stat-card__value { color: $color-accent; }
+    }
+
+    &--orange {
+        &::before { background: $color-primary; }
+
+        .stat-card__icon {
+            background: rgba($color-primary, 0.1);
+            color: $color-primary;
+        }
+
+        .stat-card__value { color: $color-primary; }
+    }
+
+    &--purple {
+        &::before { background: #8e44ad; }
+
+        .stat-card__icon {
+            background: rgba(#8e44ad, 0.1);
+            color: #8e44ad;
+        }
+
+        .stat-card__value { color: #8e44ad; }
+    }
+
+    &__icon {
+        font-size: 1.8rem;
+        width: 56px;
+        height: 56px;
+        @include flex-center;
+        border-radius: $radius-md;
+        flex-shrink: 0;
+    }
+
+    &__label {
+        font-size: 0.8rem;
+        color: $color-text-light;
+        font-weight: 500;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    &__value {
+        font-size: 1.6rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+    }
+}
+
+// action buttons
+.action-btn {
+    @include flex-center;
+    flex-direction: column;
+    gap: $spacing-sm;
+    padding: $spacing-lg;
+    border-radius: $radius-md;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: $transition;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    &__icon {
+        font-size: 1.8rem;
+    }
+
+    &__text {
+        font-size: 0.85rem;
+    }
+
+    &--deposit {
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        color: $color-white;
+
+        &:hover { color: $color-white; }
+        &:visited { color: $color-white; }
+    }
+
+    &--withdraw {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        color: $color-white;
+
+        &:hover { color: $color-white; }
+        &:visited { color: $color-white; }
+    }
+
+    &--history {
+        background: linear-gradient(135deg, $color-accent, #2980b9);
+        color: $color-white;
+
+        &:hover { color: $color-white; }
+        &:visited { color: $color-white; }
+    }
+
+    &--personal {
+        background: linear-gradient(135deg, #8e44ad, #9b59b6);
+        color: $color-white;
+
+        &:hover { color: $color-white; }
+        &:visited { color: $color-white; }
+    }
+}
+
+// badges
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: $radius-lg;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &--deposit {
+        background: rgba(#27ae60, 0.12);
+        color: #27ae60;
+    }
+
+    &--withdraw {
+        background: rgba(#e74c3c, 0.12);
+        color: #e74c3c;
+    }
+}
+
+// table wrapper
+.table-wrapper {
+    background: $color-white;
+    border-radius: $radius-md;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.table__td--amount {
+    color: #27ae60;
+    font-weight: 700;
+}
+
+.table__td--withdraw {
+    color: #e74c3c;
+    font-weight: 700;
+}

@@ -1,0 +1,60 @@
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: $spacing-md 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-lg;
+        @include flex-between;
+    }
+
+    &__logo {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-primary;
+        transition: $transition;
+
+        &:hover {
+            color: $color-primary-hover;
+        }
+
+        &:visited {
+            color: $color-primary;
+        }
+    }
+
+    &__nav {
+        @include flex-center;
+        gap: $spacing-md;
+    }
+
+    &__link {
+        color: $color-text;
+        font-weight: 500;
+        padding: $spacing-sm $spacing-md;
+        border-radius: $radius-sm;
+        transition: $transition;
+
+        &:hover {
+            color: $color-primary;
+            background: rgba($color-primary, 0.08);
+        }
+
+        &--active {
+            color: $color-primary;
+            font-weight: 600;
+        }
+    }
+
+    @include mobile {
+        &__container {
+            flex-direction: column;
+            gap: $spacing-sm;
+        }
+    }
+}

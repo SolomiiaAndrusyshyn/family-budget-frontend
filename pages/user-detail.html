@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Family Budget - Member Details">
+    <title>Member Details | Family Budget</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo">💰 Family Budget</a>
+            <nav class="header__nav">
+                <a href="../index.html" class="header__nav-link">Dashboard</a>
+                <a href="./family-budget.html" class="header__nav-link">Family Budget</a>
+                <a href="./categories.html" class="header__nav-link">Categories</a>
+                <a href="./users.html" class="header__nav-link header__nav-link--active">Members</a>
+                <a href="./login.html" class="header__nav-link header__nav-link--logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="page">
+
+            <div class="page__header">
+                <a href="./users.html" class="page__back">← Back</a>
+                <h1 class="page__title">Member Details</h1>
+                <p class="page__subtitle">View selected family member information</p>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-card__avatar">👤</div>
+
+                <div class="detail-card__content">
+                    <p class="detail-card__label">Username</p>
+                    <p class="detail-card__value">John</p>
+
+                    <p class="detail-card__label">Role</p>
+                    <p class="detail-card__value">Admin</p>
+
+                    <p class="detail-card__label">Personal Balance</p>
+                    <p class="detail-card__value">$200.00</p>
+
+                    <p class="detail-card__label">Status</p>
+                    <p class="detail-card__value">Active</p>
+                </div>
+            </div>
+
+            <div class="page__actions">
+                <a href="./edit-user.html" class="btn btn--primary btn--small">Edit Member</a>
+                <a href="./personal-history.html" class="btn btn--secondary btn--small">View History</a>
+                <button class="btn btn--danger btn--small">Delete Member</button>
+            </div>
+
+            <div class="notification notification--error">
+                <span class="notification__text">This member cannot be deleted because they are an admin.</span>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2024 Family Budget</p>
+        </div>
+    </footer>
+
+</body>
+</html>

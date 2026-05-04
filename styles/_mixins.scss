@@ -1,0 +1,42 @@
+// Flex center
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Flex between
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Background image cover
+@mixin bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// Responsive mobile
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+// Responsive tablet
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+// Glass effect (для форми на фоні)
+@mixin glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: $radius-md;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}

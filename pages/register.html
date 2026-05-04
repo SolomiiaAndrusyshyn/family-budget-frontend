@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Family Budget - Registration">
+    <title>Register | Family Budget</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo">💰 Family Budget</a>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+        <div class="register">
+
+            <h1 class="register__title">Create Account</h1>
+
+            <!-- error notification -->
+            <div class="notification notification--error" id="error-message">
+                <span class="notification__text">This username already exists!</span>
+            </div>
+
+            <!-- register form -->
+            <form class="form" id="register-form">
+
+                <div class="form__group">
+                    <label class="form__label" for="username">Username</label>
+                    <input
+                        class="form__input"
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        minlength="3"
+                        maxlength="30"
+                        required
+                    >
+                    <span class="form__error" id="username-error">Minimum 3 characters</span>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="password">Password</label>
+                    <input
+                        class="form__input"
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        minlength="4"
+                        maxlength="50"
+                        required
+                    >
+                    <span class="form__error" id="password-error">Minimum 4 characters</span>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="confirm-password">Confirm Password</label>
+                    <input
+                        class="form__input"
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Repeat your password"
+                        required
+                    >
+                    <span class="form__error" id="confirm-error">Passwords do not match</span>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="role">Role</label>
+                    <select class="form__select" id="role" name="role" required>
+                        <option value="">Select a role</option>
+                        <option value="admin">Admin</option>
+                        <option value="regular">Member</option>
+                    </select>
+                    <span class="form__error" id="role-error">Please select a role</span>
+                </div>
+
+                <button class="btn btn--primary" type="submit">
+                    Register
+                </button>
+
+            </form>
+
+            <p class="register__login-link">
+                Already have an account?
+                <a href="./login.html" class="register__link">Sign in</a>
+            </p>
+
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2024 Family Budget</p>
+        </div>
+    </footer>
+
+</body>
+</html>

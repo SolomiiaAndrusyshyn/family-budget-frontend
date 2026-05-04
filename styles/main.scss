@@ -1,0 +1,22 @@
+// Variables & Mixins - must be first
+@import 'variables';
+@import 'mixins';
+
+// Base
+@import 'base';
+
+// Layout
+@import 'header';
+@import 'footer';
+@import 'layout';
+
+// Components
+@import 'buttons';
+@import 'notifications';
+@import 'forms';
+@import 'table';
+@import 'cards';
+
+@import 'dashboard';
+@import 'budget';
+@import 'transactions';

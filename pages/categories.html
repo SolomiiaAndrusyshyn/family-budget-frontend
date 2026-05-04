@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Family Budget - Categories">
+    <title>Categories | Family Budget</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo">Family Budget</a>
+            <nav class="header__nav">
+                <a href="../index.html" class="header__nav-link">Dashboard</a>
+                <a href="./family-budget.html" class="header__nav-link">Family Budget</a>
+                <a href="./categories.html" class="header__nav-link header__nav-link--active">Categories</a>
+                <a href="./users.html" class="header__nav-link">Members</a>
+                <a href="./login.html" class="header__nav-link header__nav-link--logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="page">
+
+            <div class="page__header">
+                <h1 class="page__title">Categories</h1>
+                <p class="page__subtitle">Manage income and expense categories</p>
+            </div>
+
+            <div class="notification notification--error">
+                <span class="notification__text">Category name cannot be empty!</span>
+            </div>
+
+            <!-- form + image side by side -->
+            <div class="categories-layout">
+
+                <div class="form-card">
+                    <form class="form">
+                        <div class="form__group">
+                            <label class="form__label" for="category-name">Category Name</label>
+                            <input
+                                class="form__input"
+                                type="text"
+                                id="category-name"
+                                name="category-name"
+                                placeholder="Enter category name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="category-type">Category Type</label>
+                            <select class="form__select" id="category-type" name="category-type" required>
+                                <option value="">Select type</option>
+                                <option value="income">Income</option>
+                                <option value="expense">Expense</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn--primary" type="submit">Add Category</button>
+                    </form>
+                </div>
+
+                <div class="categories-visual">
+                    <img src="../images/chart-icon.png" alt="Budget chart" class="categories-visual__img">
+                </div>
+
+            </div>
+
+            <!-- existing categories -->
+            <div class="section">
+                <h2 class="section__title">Existing Categories</h2>
+
+                <div class="table-card">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Salary</td>
+                                <td>Income</td>
+                                <td>
+                                    <button class="btn btn--danger btn--small">Delete</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Food</td>
+                                <td>Expense</td>
+                                <td>
+                                    <button class="btn btn--danger btn--small">Delete</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Transport</td>
+                                <td>Expense</td>
+                                <td>
+                                    <button class="btn btn--danger btn--small">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2024 Family Budget</p>
+        </div>
+    </footer>
+
+</body>
+</html>
